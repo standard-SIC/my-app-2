@@ -1,0 +1,9 @@
+node{
+   stage('SCM checkout'){
+     git 'https://github.com/standard-SIC/my-app-2'
+   }
+   
+   stage('Compile-Package'){
+     sh 'mvn package'
+   }
+}
