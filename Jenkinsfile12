@@ -13,5 +13,7 @@ node{
      thanks and Regards
      ''', cc: '', from: '', replyTo: '', subject: 'Jenkins Jobs', to: 'ntndash@gmail.com'
    }
-   
+   stage('Slack Notification'){
+      slackSend baseUrl: 'https://hooks.slack.com/services/', channel: 'jenkins-pipeline-demo', color: 'good', message: 'Welcome to Jenkins. Slack!', tokenCredentialId: 'slack-demo', username: 'HCL TECH'
+   }
 }
